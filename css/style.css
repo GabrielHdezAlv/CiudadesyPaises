@@ -1,0 +1,125 @@
+body, header, main{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    margin: 0px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    background-color: skyblue;
+    color: white;
+    align-items: center;
+}
+
+main{
+    flex: 1;
+}
+
+#superior{
+    flex-grow: 1;
+    display: flex;
+}
+
+#inferior{
+    flex-grow: 1;
+    border-top: 4px solid skyblue;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dropDrag{
+    width: 80%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#divCiudades{
+    flex-grow: 1;
+    background-color: darkseagreen;
+    height: 2cm;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divNameCiudad{
+    display: flex;
+    justify-content: center;
+    border: 2px solid skyblue;
+    width: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+#divPaises{
+    flex-grow: 1.5;
+    border-top: 3px dashed skyblue;
+    background-color: darkseagreen;
+    height: 5cm;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divNamePais{
+    display: flex;
+    justify-content: center;
+    border: 2px solid skyblue;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.divDropPais{
+    border: 2px solid skyblue;
+    width: 220px;
+    height: 130px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#map{
+    flex-grow: 2;
+}
+
+#myMap{
+    height: 100%;
+    width: 100%;
+}
+
+#menu{
+    padding: 10px;
+    background-color: darkseagreen;
+    border-bottom: 2px solid skyblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+#divTiempo{
+    display: flex;
+}
+
+.tiempo{
+    color: steelblue;
+    margin: 2px;
+
+}
+
+#newGame{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid skyblue;
+    color: steelblue;
+}
