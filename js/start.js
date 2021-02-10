@@ -25,6 +25,8 @@ function contador() {
 /**
  * Generamos el mapa con la ubicación del CIFP Cesar Manrique
  */
+// eslint-disable-next-line vars-on-top
+let marker;
 $(() => {
   const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
@@ -33,10 +35,8 @@ $(() => {
   L.tileLayer(tilesProvider, {
     maxZoom: '18',
   }).addTo(myMap);
-
-  L.marker(['28.457364001409033', '-16.284016164025623'])
-    .addTo(myMap)
-    .bindPopup('Cesar Manrique');
+  marker = L.marker(['28.457364001409033', '-16.284016164025623']);
+  marker.addTo(myMap).bindPopup('Cesar Manrique');
 });
 
 // Google Pie Chart
@@ -298,7 +298,9 @@ function goCity(evento, ui) {
         const mapLocal = city.location;
         // myMap.setView(mapLocal, '13');
         myMap.flyTo(mapLocal, '13');
-        L.marker(mapLocal).addTo(myMap).bindPopup(ciudad[0].name);
+        myMap.removeLayer(marker);
+        marker = L.marker(mapLocal);
+        marker.addTo(myMap).bindPopup(ciudad[0].name);
       }
     });
   });
